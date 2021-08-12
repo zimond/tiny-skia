@@ -182,7 +182,7 @@ impl PixmapMut<'_> {
 
             // TODO: draw tiler
             let bbox = rect.round_out();
-            if bbox.width() > MAX_DIM || bbox.height() > MAX_DIM {
+            if bbox.width() * bbox.height() > MAX_DIM * MAX_DIM {
                 return None;
             }
 
